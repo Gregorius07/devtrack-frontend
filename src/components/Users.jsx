@@ -1,12 +1,13 @@
 import api from "../api.js";
 import { useEffect, useState } from "react";
 
-function User({ name, email, role }) {
+function User({ name, email, role, password }) {
   return (
     <>
       <h1>Name: {name}</h1>
       <h1>Email: {email}</h1>
       <h1>Role: {role}</h1>
+      <h1>Password: {password}</h1>
     </>
   );
 }
@@ -45,6 +46,7 @@ export default function Users() {
           name={user.name}
           email={user.email}
           role={user.role}
+          password = {user.password_hash}
         />
       ))}
     </>
